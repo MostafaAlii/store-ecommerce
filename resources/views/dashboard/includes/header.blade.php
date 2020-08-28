@@ -33,7 +33,7 @@
     <!-- Start User Info Dropdown Menu -->
     <div class="dropdown userInfoMenu-container">
         <div class="username" id="userInfoMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <img class="avatar rounded-circle" src="{{asset('public/assets/admin/img/avatar/avatar.jpg')}}" alt="صورة المستخدم"/><span class="user">مصطفى على</span><i class="fa fa-angle-down fa-lg user-angle-icon"></i></div>
+            <img class="avatar rounded-circle" src="{{asset('assets/admin/img/avatar/avatar.jpg')}}" alt="صورة المستخدم"/><span class="user">مصطفى على</span><i class="fa fa-angle-down fa-lg user-angle-icon"></i></div>
         <div class="dropdown-menu userDropdownMenu dropdown-menu-left" aria-labelledby="userInfoMenu">
             <!-- Start UserInfo -->
             <div class="userInfo">
