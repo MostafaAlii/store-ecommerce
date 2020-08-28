@@ -114,7 +114,7 @@
                 <!-- logout Link -->
                 <div class="col">
                     <div class="link-box">
-                        <a href="{{ route('admin.logout') }}">
+                        <a href="">
                             <i class="fa fa-power-off fa-lg fa-fw user-linkBox-icon logout-icon"></i>
                             <span class="text-center">{{ trans('admin.logout') }}</span>
                         </a>

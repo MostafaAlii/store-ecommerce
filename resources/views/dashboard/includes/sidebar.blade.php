@@ -1,7 +1,7 @@
 <!-- Start Sidebar-->
 <div class="sidebar">
     <!-- Start Logo Area-->
-    <div class="logo-area text-center"><img class="logo" src="{{ asset('public/assets/admin/img/logo/techno.png') }}" alt=""/>
+    <div class="logo-area text-center"><img class="logo" src="{{ asset('assets/admin/img/logo/techno.png') }}" alt=""/>
         <p class="logoText">{{ trans('admin.application_name') }}</p>
     </div>
     <!-- End Logo Area-->

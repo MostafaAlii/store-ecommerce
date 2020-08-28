@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ asset('assets/admin/css/bootstrap.min.css') }}"/>
     <link rel="stylesheet" href="{{ asset('assets/admin/css/main.css') }}"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&amp;family=Open+Sans&amp;display=swap"/>
+    @notify_css
 </head>
 <body>
 <div class="page home-page">
