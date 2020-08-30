@@ -40,6 +40,17 @@ return [
         'logout'                            =>  'تسجيل الخروج',
         'welcome_user_text'                 =>  'مرحبا يا',
         'edit_user_profile'                 =>  'تعديل الملف الشخصى',
+        'dashboard_page'                    =>  'الاحصائيات العامة',
+        'generate_reports'                  =>  'تحميل التقارير',
+        'total_sales'                       =>  'اجمالى المبيعات',
+        'total_requests'                    =>  'اجمالى الطلبات',
+        'pending_requests'                   =>  'طلبات قيد التفعيل',
+        'total_products'                    =>  'اجمالى المنتجات',
+        'product'                           =>  'منتج',
+        'pending_products'                  =>  'منتجات قيد التفعيل',
+        'supplier'                          =>  'عميل',
+        'total_suppliers'                    =>  'اجمالى عدد العملاء',
+        'pending_supplier'                  =>  'عملاء قيد التفعيل',
 /***********************************************************************************************************/
     // DataTables Export Btn ::
         'print'                             =>  'طباعة',

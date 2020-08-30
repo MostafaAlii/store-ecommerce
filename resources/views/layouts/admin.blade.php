@@ -4,7 +4,7 @@
 
 <div class="content-area">
     @include('dashboard.includes.header')
-    <div class="container-fluid">
+    <div class="container-fluid pull-right">
         @yield('content')
     </div>
 </div>

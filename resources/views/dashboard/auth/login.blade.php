@@ -1,4 +1,7 @@
 @extends('layouts.login')
+@section('page_title')
+    {{ trans('admin.login_here_now') }}
+@endsection
 @section('content')
     <section class="flexbox-container">
         <div class="col-12 d-flex align-items-center justify-content-center">
