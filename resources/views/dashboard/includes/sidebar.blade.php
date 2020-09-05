@@ -26,12 +26,28 @@
         <!-- End Dashboard Link -->
         <!-- Start Main Settings Link -->
         <li>
-            <a href="#">
+            <a class="toggle-submenu" href="#">
+                <i class="fa fa-caret-left"></i>
                 {{ trans('admin.main_settings') }}
                 <i class="fa fa-gears general-icon"></i>
             </a>
         </li>
         <!-- End Main Settings Link -->
+
+        <!-- Start Shipping Delivery -->
+        <li>
+            <a class="toggle-submenu" href="#">
+                <i class="fa fa-caret-left"></i>
+                {{ trans('admin.shipping_delivery') }}
+                <i class="fa fa-truck general-icon"></i>
+            </a>
+            <ul class="child-links list-unstyled">
+                <li><a href="#">{{ trans('admin.free_shipping') }}</a></li>
+                <li><a href="#">{{ trans('admin.locale_shipping') }}</a></li>
+                <li><a href="#">{{ trans('admin.external_shipping') }}</a></li>
+            </ul>
+        </li>
+        <!-- End Shipping Delivery -->
 
         <!-- Start Main Languages Link -->
         <li>
