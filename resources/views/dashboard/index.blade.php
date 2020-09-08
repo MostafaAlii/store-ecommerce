@@ -6,11 +6,11 @@
     <!-- Start Page Heading -->
     <br>
     <div class="page-heading d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">{{ trans('admin.dashboard_page') }}</h1>
         <a class="d-none d-sm-inline-block btn btn-dark shadow-sm" href="">
             <i class="fa fa-download fa-sm text-white-50"></i>
             {{ trans('admin.generate_reports') }}
         </a>
-        <h1 class="h3 mb-0 text-gray-800">{{ trans('admin.dashboard_page') }}</h1>
     </div>
     <!-- End Page Heading -->
 

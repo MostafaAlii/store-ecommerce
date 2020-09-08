@@ -54,6 +54,8 @@ return [
 /***********************************************************************************************************/
     // Setting Page ::
     'shipping_delivery'                     =>  'وسائل التوصيل',
+    'edit_shipping_methods'                 =>  'تعديل وسائل التوصيل',
+    'shipping_methods_name'                 =>  'اسم وسيلة التوصيل',
     'free_shipping'                         =>  'توصيل مجانى',
     'locale_shipping'                       =>  'توصيل داخلى',
     'external_shipping'                     =>  'توصيل خارجى',
