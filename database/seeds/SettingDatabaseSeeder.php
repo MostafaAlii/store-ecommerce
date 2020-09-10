@@ -23,10 +23,10 @@ class SettingDatabaseSeeder extends Seeder
             'outer_shipping_cost' => 0,
             'free_shipping_cost' => 0,
             'translatable' => [
-                'store_name' => 'Techno Store',
-                'free_shipping_label' => 'Free Shipping',
-                'local_label' => 'Locale shipping',
-                'outer_label' => 'outer shipping'
+                'store_name' => 'تكنو استور',
+                'free_shipping_label' => 'توصيل مجانى',
+                'local_label' => 'توصيل محلى',
+                'outer_label' => 'توصيل خارجى'
             ],
         ]);
     }
