@@ -27,17 +27,21 @@
     </div>
     <!-- End Notifications Icon Dropdown Menu-->
 
+    <!-- Start Languages Icon Dropdown Menu-->
+    <!--<i class="fa fa-globe" aria-hidden="true"></i>-->
+    <!-- End Languages Icon Dropdown Menu-->
+
     <!-- FullScreen Icon-->
     <i class="fa fa-expand fa-lg toggle-fullscreen header-icon"></i>
 
     <!-- Start User Info Dropdown Menu -->
     <div class="dropdown userInfoMenu-container">
         <div class="username" id="userInfoMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <img class="avatar rounded-circle" src="{{asset('assets/admin/img/avatar/avatar.jpg')}}" alt="صورة المستخدم"/><span class="user">مصطفى على</span><i class="fa fa-angle-down fa-lg user-angle-icon"></i></div>
+            <img class="avatar rounded-circle" src="{{asset('assets/admin/img/avatar/avatar.jpg')}}" alt="صورة المستخدم"/><span class="user">{{ auth('admin')->user()->name }}</span><i class="fa fa-angle-down fa-lg user-angle-icon"></i></div>
         <div class="dropdown-menu userDropdownMenu dropdown-menu-left" aria-labelledby="userInfoMenu">
             <!-- Start UserInfo -->
             <div class="userInfo">
-                <h3>مصطفى على عبد العزيز</h3>
+                <h3>{{ auth('admin')->user()->name }}</h3>
                 <p>مدير التطبيق</p>
             </div>
             <!-- End UserInfo -->
@@ -48,17 +52,17 @@
                     <!-- Start User Info Box -->
                     <div class="user-email-info">
                         <small class="user-email text-muted">{{ trans('admin.table_field_email') }}</small>
-                        <h6 class="user-emailaddress">mostafa0alii@gmail.com</h6>
+                        <h6 class="user-emailaddress">{{ auth('admin')->user()->email }}</h6>
                     </div>
 
                     <div class="user-phone-info">
                         <small class="user-phone text-muted">{{ trans('admin.table_field_phone') }}</small>
-                        <h6 class="user-phone-number">0201015558628+</h6>
+                        <h6 class="user-phone-number">{{ auth('admin')->user()->phone }} -02+</h6>
                     </div>
 
                     <div class="user-address-info">
                         <small class="user-address text-muted">{{ trans('admin.table_field_address') }}</small>
-                        <h6 class="user-fully-address">المريوطية / الهرم</h6>
+                        <h6 class="user-fully-address">{{ auth('admin')->user()->address }}</h6>
                     </div>
 
                     <div class="user-social-link">
@@ -114,7 +118,7 @@
                 <!-- logout Link -->
                 <div class="col">
                     <div class="link-box">
-                        <a href="">
+                        <a href="{{ route('admin.logout') }}">
                             <i class="fa fa-power-off fa-lg fa-fw user-linkBox-icon logout-icon"></i>
                             <span class="text-center">{{ trans('admin.logout') }}</span>
                         </a>

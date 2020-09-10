@@ -25,4 +25,12 @@ class LoginController extends Controller
         //notify()->error(trans('admin.login_access_error'));
         return redirect()->back()->with(['error' =>  trans('admin.login_access_error')]);
     }
+    public function logout(){
+        $gaurd = $this->getGaurd();
+        $gaurd->logout();
+        return redirect()->route('admin.login');
+    }
+    private function getGaurd(){
+        return auth('admin');
+    }
 }
