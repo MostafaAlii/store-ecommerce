@@ -52,6 +52,7 @@ return [
     'shipping_delivery'                     =>  'Shipping Methods',
     'edit_shipping_methods'                 =>  'Edit Shipping Methods',
     'shipping_methods_name'                 =>  'Shipping Methods Name',
+    'shipping_methods_value'                 =>  'Shipping Methods Value',
     'free_shipping'                         =>  'Free Shipping Method',
     'locale_shipping'                       =>  'Inner Shipping Method',
     'external_shipping'                     =>  'External Shipping Method',

@@ -32,6 +32,10 @@ return [
     'address_max'                           =>  'العنوان يجب الا يزيد عن 300 حرف',
     'category_id_exists'                    =>  'هذا القسم غير موجود',
     'logo_required'                         =>  'برجاء ارفاق صورة لانها مطلوبة',
+    'plain_value_numeric'                   =>  'قيمة التوصيل يجب ان تكون ارقام فقط',
+    'value_required'                        =>  'اسم وسيلة التوصيل مطلوبة',
+    'shipping_methods_success_edit'         =>  'تم حفظ و تحديث بيانات وسيلة التوصيل بنجاح',
+    'shipping_methods_error'                =>  'يوجد خطأ فى تحديث بيانات وسيلة التوصيل حاول مره اخرى',
 
     // Dashboard Page Title ::
         'application_name'                  =>  'تكنو',
@@ -44,18 +48,16 @@ return [
         'generate_reports'                  =>  'تحميل التقارير',
         'total_sales'                       =>  'اجمالى المبيعات',
         'total_requests'                    =>  'اجمالى الطلبات',
-        'pending_requests'                   =>  'طلبات قيد التفعيل',
         'total_products'                    =>  'اجمالى المنتجات',
         'product'                           =>  'منتج',
-        'pending_products'                  =>  'منتجات قيد التفعيل',
         'supplier'                          =>  'عميل',
         'total_suppliers'                    =>  'اجمالى عدد العملاء',
-        'pending_supplier'                  =>  'عملاء قيد التفعيل',
 /***********************************************************************************************************/
     // Setting Page ::
     'shipping_delivery'                     =>  'وسائل التوصيل',
     'edit_shipping_methods'                 =>  'تعديل وسائل التوصيل',
     'shipping_methods_name'                 =>  'اسم وسيلة التوصيل',
+    'shipping_methods_value'                 =>  'قيمة وسيلة التوصيل',
     'free_shipping'                         =>  'توصيل مجانى',
     'locale_shipping'                       =>  'توصيل داخلى',
     'external_shipping'                     =>  'توصيل خارجى',
