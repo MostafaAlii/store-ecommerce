@@ -12,6 +12,247 @@ html body{
     direction: rtl;
     text-align: right;
 }
+/******************************************* Start Member Profile Page ******************************************/
+.profile_header{
+    background: #fff;
+    width: 100%;
+    display: flex;
+    height: 190px;
+    position: relative;
+    box-shadow: 0 3px 4px rgba(0,0,0,.2);
+}
+.profile_header .profile_img{
+    float: right;
+    width: 340px !important;
+    height: 200px !important;
+    margin-right: 15px;
+}
+.profile_header .profile_img img{
+    border-radius: 50% !important;
+    width: 230px;
+    height: 230px;
+    border: 4px solid #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    position: absolute;
+    top: 25px;
+    z-index: 5;
+    background: #fff;
+}
+.profile_nav_info{
+    float: right;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 70px;
+}
+.profile_nav_info h3{
+    font-variant: small-caps;
+    font-size: 2rem;
+    font-family: 'Cairo', sans-serif;
+    font-weight: bold;
+}
+.profile_nav_info .address{
+    display: flex;
+    font-weight: bold;
+    color: #777;
+}
+.profile_nav_info .address p{
+    margin-left: 5px;
+}
+.main_bd{
+    width: 100%;
+    display: flex;
+    padding-left: 15px;
+}
+.main_bd .profile_side{
+    width: 300px;
+    background: #fff;
+    box-shadow: 0 3px 5px rgba(0,0,0,.2);
+    padding: 90px 30px 20px;
+    font-family: 'Cairo', sans-serif;
+    font-weight: bold;
+    margin-right: 10px;
+    z-index: 99;
+}
+.main_bd .profile_side p{
+    margin-bottom: 7px;
+    color: #777;
+    font-size: 14px;
+}
+.main_bd .profile_side p i{
+    margin-left: 10px;
+}
+.mobile-no i{
+    transform: rotateY(180deg);
+}
+.profile_btn{
+    display: flex;
+}
+.profile_btn button.chatbtn,
+.profile_btn button.createbtn{
+    border: 0;
+    padding: 10px;
+    width: 100%;
+    border-radius: 3px;
+    font-family: 'Cairo', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 5px 2px;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 10px;
+    transition: background .3s ease-in-out;
+    box-shadow: 0 5px 7px 0 rgba(0,0,0,.3);
+}
+.profile_btn button.chatbtn i,
+.profile_btn button.createbtn i{
+    margin-left: 2px;
+}
+.user_rating{
+    display: flex;
+}
+.user_rating h3{
+    font-size: 2.5rem;
+    font-weight: 200;
+    margin-left: 5px;
+    letter-spacing: 1px;
+    color: #666666;
+}
+.user_rating .no_user{
+    font-size: .9rem;
+}
+.rate{
+    padding-top: 6px;
+}
+.rate i{
+    font-size: .9rem;
+}
+.user_bio h3,
+.profile_side h3{
+    color: #444;
+    font-weight: 600;
+}
+
+.dynamic-tabs{
+    width: 100%;
+    z-index: -1;
+}
+.dynamic-tabs ul.tabs-list{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    list-style-type: none;
+    height: 50px;
+    background: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
+}
+.dynamic-tabs ul.tabs-list li a{
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-family: 'Cairo', sans-serif;
+}
+.dynamic-tabs ul.tabs-list li{
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+.dynamic-tabs ul.tabs-list li:hover a,
+.dynamic-tabs ul.tabs-list li a:hover{
+    border: none;
+    box-shadow: 0 -3px 0 rgba(41,44,51,1) inset;
+    color: #0275d8;
+    font-weight: bold;
+}
+.dynamic-tabs ul.tabs-list li a.active{
+    color: #0275d8;
+    font-weight: bold;
+    box-shadow: 0 -3px 0 rgba(41,44,51,1) inset;
+}
+
+.dynamic-tabs .content-list{
+    width: 98%;
+    margin-right: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
+    text-indent: 10px;
+    /*z-index: -1;*/
+}
+.dynamic-tabs .content-list > div{
+    padding: 20px;
+    min-height: 420px;
+}
+.left_side{
+    width: 100%;
+}
+/***************************** Start User Setting ************************/
+.get_setting{
+    max-width: 800px;
+    margin: 0 50px 50px 50px;
+    position: relative;
+    padding: 30px;
+}
+#file{
+    display: none;
+}
+.setting-form .userImg .input-label fa.upload_icon{
+    margin-right: 10px;
+}
+.setting-form .userImg .input-label{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    background: #009688;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: right;
+    transition: transform 0.3s ease-in-out;
+}
+.setting-form .userImg .input-label:hover{
+    background: #26a69a;
+    cursor: pointer;
+}
+.setting-form .form-field{
+    position: relative;
+    margin: 20px 0 !important;
+    background: none;
+}
+.setting-form .input-text{
+    display: block;
+    width: 100%;
+    height: 36px;
+    border-width: 0 0 2px 0;
+    border-color: #666666;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    background: none;
+}
+.setting-form .input-text:focus .label{
+    display: none;
+    transition: transform 0.2s ease-in-out;
+}
+.setting-form .input-text:focus .label,
+.setting-form .input-text.not-empty .label{
+    transform: translateY(24px) !important;
+}
+.setting-form .input-text:focus{
+    outline: none;
+}
+.setting-form .label{
+    position: absolute;
+    right: 20px;
+    bottom: 11px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #666666;
+    cursor: text;
+    transition: transform 0.2s ease-in-out;
+}
+/***************************** End User Setting ************************/
+/******************************************* End Member Profile Page ******************************************/
 
 /* Start Main Dashboard */
 .card{
@@ -71,7 +312,3 @@ html body{
     margin-right: 0;
 }
 /* End Chart Area */
-
-/* Start Latest */
-.latest{}
-/* End Latest */

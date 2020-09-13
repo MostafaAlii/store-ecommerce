@@ -109,7 +109,7 @@
                 <!-- Profile Link -->
                 <div class="col">
                     <div class="link-box">
-                        <a href="#">
+                        <a href="{{ route('show.user.profile') }}">
                             <i class="fa fa-user fa-lg fa-fw user-linkBox-icon profile-icon"></i>
                             <span class="text-center">{{ trans('admin.profile') }}</span>
                         </a>
