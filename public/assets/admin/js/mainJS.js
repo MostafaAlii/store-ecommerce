@@ -1,8 +1,8 @@
 $(function (){
     'use strict';
-    // Refresh Btn 
+    // Refresh Btn
     $('.refresh-btn').on('click', function (){
-        location.reload(true);    
+        location.reload(true);
     });
     // Nice Scroll Active
     $('html').niceScroll({
@@ -19,10 +19,10 @@ $(function (){
     // Sidebar & Content bar Toggle
     $(".toggle-sidebar").on("click", function (){
         $(".content-area, .sidebar").toggleClass("no-sidebar");
-        //$(".content-area").css("padding-right", "50px");
+        //$(".profileLeftTabs").css("width", "1350px");
         //$("ul.links-area").css("display", "none");
         // If Explain هشوف شرح ليها عشان فى تركاية هنا
-    });    
+    });
     // Fullscreen Changing Btn
     $(".toggle-fullscreen").on("click", function() {
         $(this).toggleClass('full-screen');
@@ -38,6 +38,17 @@ $(function (){
     $(".toggle-settings").on("click", function(){
       $(this).find("i").toggleClass("fa-spin");
       $(this).parent().toggleClass("hide-setting-box");
+    });
+    // User Img file Upload in User Profile Setting Page
+    $("#file").on("change", function (){
+        var files = $(this)[0].files;
+        if (files.length <= 1){
+            $("#label_span").text(files.length + " الصورة جاهزة للارفاق")
+        } else {
+            //alert("الصورة الشخصية يجب ان تكون صورة واحدة فقط")
+            var filename = e.target.value.splite('\\').pop();
+            $("#label_span").text(filename);
+        }
     });
 });
     // Open FullScreen

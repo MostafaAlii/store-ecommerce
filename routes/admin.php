@@ -20,6 +20,12 @@ Route::group([
             Route::get('shipping-methods/{type}', 'SettingsController@editShippingMethods')->name('edit.shipping.methods');
             Route::put('shipping-methods/{id}', 'SettingsController@updateShippingMethods')->name('update.shipping.methods');
         });
+        // Member Profile ::
+        Route::group(['prefix' => 'profile'], function () {
+            Route::get('/', 'ProfileController@index')->name('show.user.profile');
+            Route::get('edit', 'ProfileController@editProfile')->name('edit.user.profile');
+            Route::put('update', 'ProfileController@updateProfile')->name('update.user.profile');
+        });
     });
     // Users Routes ::
     Route::group(['namespace' => 'Dashboard', 'prefix'  =>  'admin', 'middleware' => 'guest:admin'], function () {
