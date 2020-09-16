@@ -12,10 +12,12 @@ class CreateAdminsTable extends Migration
         Schema::create('admins', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 100);
+            $table->string('nickname', 100);
             $table->string('email')->unique();
             $table->string('address', 225);
+            $table->text('bio_content');
             $table->string('city', 100);
-            $table->string('phone', 100);
+            $table->string('country', 100);
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();

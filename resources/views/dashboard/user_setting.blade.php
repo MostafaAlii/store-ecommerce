@@ -13,9 +13,10 @@
         <!-- Start Container -->
         <div class="container">
             <!-- Start Setting Form -->
-            <form class="form setting-form row" action="" method="" enctype="multipart/form-data">
-                @csrf
-                <!-- Start UserImg Field -->
+            <form class="form setting-form row" action="{{ route('update.profile') }}" method="post" enctype="multipart/form-data">
+            @csrf
+            @method('PUT')
+            <!-- Start UserImg Field -->
                 <div class="form-field userImg form-group col-lg-6">
                     <label for="file" class="input-label">
                         <i class="fa fa-upload upload_icon"> </i>
@@ -29,7 +30,10 @@
                 <!-- Start Name Field -->
                 <div class="form-field form-group col-lg-6">
                     <label for="name" class="label">{{ trans('admin.user_name') }}</label>
-                    <input id="name" class="input-text" type="text" name="name">
+                    <input id="name" class="input-text" value="{{ $admin->name }}" type="text" name="name">
+                    @error("name")
+                    <span class="text-danger">{{ $message }}</span>
+                    @enderror
                 </div>
                 <!-- End Name Field -->
 
@@ -54,8 +58,15 @@
                 </div>
                 <!-- End Phone Field -->
 
+                <!-- Start City Field -->
+                <div class="form-field form-group col-lg-6">
+                    <label for="city" class="label">{{ trans('admin.user_city') }}</label>
+                    <input id="city" class="input-text" type="text" name="city">
+                </div>
+                <!-- End City Field -->
+
                 <!-- Start Address Field -->
-                <div class="form-field form-group col-lg-12">
+                <div class="form-field form-group col-lg-6">
                     <label for="address" class="label">{{ trans('admin.user_address') }}</label>
                     <input id="address" class="input-text" type="text" name="address">
                 </div>
@@ -87,7 +98,7 @@
                 </div>
                 <!-- End Submit Field -->
             </form>
-                <!-- End Form Fields -->
+            <!-- End Form Fields -->
             <!-- End Setting Form -->
         </div>
         <!-- End Container -->

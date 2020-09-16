@@ -230,7 +230,6 @@ html body{
     background: none;
 }
 .setting-form .input-text:focus .label{
-    display: none;
     transition: transform 0.2s ease-in-out;
 }
 .setting-form .input-text:focus .label,
@@ -248,6 +247,7 @@ html body{
     line-height: 26px;
     font-weight: 400;
     color: #666666;
+    margin-top: 50px !important;
     cursor: text;
     transition: transform 0.2s ease-in-out;
 }
