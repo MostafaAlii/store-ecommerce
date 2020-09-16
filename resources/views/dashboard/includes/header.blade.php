@@ -55,11 +55,6 @@
                         <h6 class="user-emailaddress">{{ auth('admin')->user()->email }}</h6>
                     </div>
 
-                    <div class="user-phone-info">
-                        <small class="user-phone text-muted">{{ trans('admin.table_field_phone') }}</small>
-                        <h6 class="user-phone-number">{{ auth('admin')->user()->phone }} -02+</h6>
-                    </div>
-
                     <div class="user-address-info">
                         <small class="user-address text-muted">{{ trans('admin.table_field_address') }}</small>
                         <h6 class="user-fully-address">{{ auth('admin')->user()->address }}</h6>
@@ -100,7 +95,7 @@
                 <!-- Settings Link -->
                 <div class="col">
                     <div class="link-box">
-                        <a href="#">
+                        <a href="">
                             <i class="fa fa-gears fa-lg fa-fw user-linkBox-icon setting-icon"></i>
                             <span class="text-center">{{ trans('admin.settings') }}</span>
                         </a>
@@ -109,7 +104,7 @@
                 <!-- Profile Link -->
                 <div class="col">
                     <div class="link-box">
-                        <a href="{{ route('show.user.profile') }}">
+                        <a href="{{ route('show.profile') }}">
                             <i class="fa fa-user fa-lg fa-fw user-linkBox-icon profile-icon"></i>
                             <span class="text-center">{{ trans('admin.profile') }}</span>
                         </a>
