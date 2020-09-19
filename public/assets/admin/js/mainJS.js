@@ -18,7 +18,8 @@ $(function (){
     });
     // Sidebar & Content bar Toggle
     $(".toggle-sidebar").on("click", function (){
-        $(".content-area, .sidebar").toggleClass("no-sidebar");
+        $(".content-area, .sidebar").toggleClass("no-sidebar"),
+        $(".footer, .sidebar").toggleClass("no-sidebar");
         //$(".profileLeftTabs").css("width", "1350px");
         //$("ul.links-area").css("display", "none");
         // If Explain هشوف شرح ليها عشان فى تركاية هنا
@@ -49,6 +50,10 @@ $(function (){
             var filename = e.target.value.splite('\\').pop();
             $("#label_span").text(filename);
         }
+    });
+    // Delete All From Admin Pages::
+    $("#delBtn").on("click", function(){
+        alert('test');
     });
 });
     // Open FullScreen

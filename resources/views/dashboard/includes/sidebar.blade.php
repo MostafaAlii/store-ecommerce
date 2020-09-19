@@ -33,6 +33,49 @@
         </li>
         <!-- End Main Settings Link -->
 
+        <!-- Start Admins Link -->
+        <li>
+            <a class="toggle-submenu" href="#">
+                <i class="fa fa-users general-icon"></i>
+                {{ trans('admin.all_admins') }}
+                <i class="fa fa-caret-left"></i>
+            </a>
+            <ul class="child-links list-unstyled">
+                <li><a href="{{ route('admin.create_admin_profile') }}">{{ trans('admin.add_admin') }}</a></li>
+                <li><a href="{{ route('admin.all_admins') }}">{{ trans('admin.show_all_admin') }}</a></li>
+            </ul>
+        </li>
+        <!-- End Admins Link -->
+
+        <!-- Start Main Categories & Sub Categories Link -->
+
+        <li>
+            <a class="toggle-submenu" href="#">
+                <i class="fa fa-list general-icon"></i>
+                {{ trans('admin.all_main_category') }}
+                <i class="fa fa-caret-left"></i>
+            </a>
+            <ul class="child-links list-unstyled">
+                <li><a href="">{{ trans('admin.add_main_category') }}</a></li>
+                <li><a href="">{{ trans('admin.show_all_main_category') }}</a></li>
+            </ul>
+        </li>
+        <!-- End Main Category -->
+        <!-- Start Sub Category -->
+        <li>
+            <a class="toggle-submenu" href="#">
+                <i class="fa fa-list general-icon"></i>
+                {{ trans('admin.all_sub_category') }}
+                <i class="fa fa-caret-left"></i>
+            </a>
+            <ul class="child-links list-unstyled">
+                <li><a href="{{ route('admin.create_admin_profile') }}">{{ trans('admin.add_sub_category') }}</a></li>
+                <li><a href="{{ route('admin.all_admins') }}">{{ trans('admin.show_all_main_category') }}</a></li>
+            </ul>
+        </li>
+        <!-- End Sub Category -->
+        <!-- End Main Categories & Sub Categories Link -->
+
         <!-- Start Shipping Delivery -->
         <li>
             <a class="toggle-submenu" href="#">
@@ -69,28 +112,6 @@
             </ul>
         </li>
         <!-- End Main Languages Link -->
-
-        <!-- Start Main Categories Link -->
-        <li>
-            <a class="toggle-submenu" href="#">
-                <i class="fa fa-edit general-icon"></i>
-                {{ trans('admin.all_website_categories') }}
-                <i class="fa fa-caret-left"></i>
-            </a>
-            <ul class="child-links list-unstyled">
-                <li>
-                    <a href="#">
-                        {{ trans('admin.add_new_category') }}
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        {{ trans('admin.show_all_categories') }}
-                    </a>
-                </li>
-            </ul>
-        </li>
-        <!-- End Main Categories Link -->
     </ul>
     <!-- End Links Area-->
 </div>

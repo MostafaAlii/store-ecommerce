@@ -7,16 +7,29 @@
     <div class="settings-content">
         <!-- Start Color Option box-->
         <div class="option-box color-option-box">
-            <h4>الالوان</h4>
+        <h4>{{ trans('admin.color') }}</h4>
         </div>
+        <hr>
+        <!-- End Color Option box-->
+        
         <!-- Start Font Option box-->
         <div class="option-box font-option-box">
-            <h4>الخطوط</h4>
+            <h4>{{ trans('admin.fonts') }}</h4>
+            <select class="form-control">
+                <option class="">Open1</option>
+                <option class="">Open2</option>
+                <option class="">Open3</option>
+            </select>
         </div>
+        <hr>
+        <!-- End Font Option box-->
+
         <!-- Start Sidebar Option box-->
         <div class="option-box sidebar-option-box">
-            <h4>القوائم الجانبية</h4>
+            <h4>{{ trans('admin.main_sidemenu') }}</h4>
         </div>
+        <hr>
+        <!-- End Sidebar Option box-->
     </div>
     <!-- End Setting Content-->
 </div>
