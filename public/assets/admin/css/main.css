@@ -12,6 +12,17 @@ html body{
     direction: rtl;
     text-align: right;
 }
+.btn-group, .btn-group-vertical {
+    /*position: relative !important;
+    display: -ms-inline-flexbox !important;
+    display: inline-flex !important;
+    vertical-align: middle !important;
+    float: left !important;*/
+}
+.dataTables_wrapper .dt-buttons button{
+    float: left !important;
+    margin: 2px;
+}
 /******************************************* Start Member Profile Page ******************************************/
 .profile_header{
     background: #fff;
@@ -235,9 +246,12 @@ html body{
 .setting-form .input-text:focus .label,
 .setting-form .input-text.not-empty .label{
     transform: translateY(24px) !important;
+    border: none;
 }
-.setting-form .input-text:focus{
+.setting-form .input-text:focus,
+.setting-form .input-text:focus-visible{
     outline: none;
+    border: none;
 }
 .setting-form .label{
     position: absolute;
@@ -312,3 +326,25 @@ html body{
     margin-right: 0;
 }
 /* End Chart Area */
+
+/* Start Footer */
+.footer{
+    width: 100%;
+    background-color: #444;
+}
+.footer .copyright{
+    color: #e9e8e8;
+    padding: 20px;
+    width: 100%;
+}
+.footer .copyright ul li{
+    display: inline-block;
+    margin-top: 25px;
+}
+.footer .copyright ul li a{
+    color: #e9e8e8;
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 18px;
+}
+/* End Footer */

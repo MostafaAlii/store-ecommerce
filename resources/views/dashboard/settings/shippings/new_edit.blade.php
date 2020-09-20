@@ -5,7 +5,7 @@
 
 @section('content')
     <div class="content-header row">
-        <div class="content-header-left col-md-12 col-12 mb-2">
+        <div class="content-header-left col-md-6 col-12 mb-2">
             <!-- Start Breadcrumbs -->
             <div class="row breadcrumbs-top">
                 <div class="breadcrumb-wrapper col-12">
@@ -46,7 +46,7 @@
                                                 <label for="projectinput1">{{ trans('admin.shipping_methods_name') }}</label>
                                                 <input class="form-control" type="text" value="{{ $shippingMethod->value }}" id="name" name="value" placeholder="">
                                                 @error("value")
-                                                    <span class="text-danger">{{ $message }}</span>
+                                                <span class="text-danger">{{ $message }}</span>
                                                 @enderror
                                             </div>
                                             <!-- End Shipping Method Name -->
@@ -63,7 +63,7 @@
                                     </div>
                                     <!-- End Shipping Methods Name and Value -->
 
-                                    <!-- Start Status --
+                                <!-- Start Status --
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group mt-1">
@@ -72,10 +72,10 @@
                                                 @error("active")
                                                     <span class="text-danger">{{ $messages }}</span>
                                                 @enderror--}}
-                                            </div>
-                                        </div>
                                     </div>
-                                    -- End Status -->
+                                </div>
+                            </div>
+                            -- End Status -->
                                     <hr>
                                     <!-- Start Form Actions -->
                                     <div class="form-actions">

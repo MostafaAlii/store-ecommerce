@@ -22,12 +22,16 @@
         <!-- Start Profile btn -->
         <div class="profile_btn">
             <button class="chatbtn">
-                <i class="fa fa-comment"></i>
-                {{ trans('admin.user_chat') }}
+                <a href="">
+                    <i class="fa fa-comment"></i>
+                    {{ trans('admin.user_chat') }}
+                </a>
             </button>
             <button class="createbtn">
-                <i class="fa fa-plus"></i>
-                {{ trans('admin.add_admin_user') }}
+                <a href="{{ route('admin.create_admin_profile') }}">
+                    <i class="fa fa-plus"></i>
+                    {{ trans('admin.add_admin_user') }}
+                </a>
             </button>
         </div>
         <!-- End Profile btn -->
