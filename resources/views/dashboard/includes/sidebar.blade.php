@@ -56,8 +56,8 @@
                 <i class="fa fa-caret-left"></i>
             </a>
             <ul class="child-links list-unstyled">
-                <li><a href="">{{ trans('admin.add_main_category') }}</a></li>
-                <li><a href="">{{ trans('admin.show_all_main_category') }}</a></li>
+                <li><a href="{{ route('admin.create.mainCategories') }}">{{ trans('admin.add_main_category') }}</a></li>
+                <li><a href="{{ route('admin.mainCategories') }}">{{ trans('admin.show_all_main_category') }}</a></li>
             </ul>
         </li>
         <!-- End Main Category -->

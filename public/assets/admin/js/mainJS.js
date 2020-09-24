@@ -4,12 +4,12 @@ $(function (){
     $('.refresh-btn').on('click', function (){
         location.reload(true);
     });
-    // Nice Scroll Active
+    // Nice Scroll
     $('html').niceScroll({
-        cursorwidth: '8px',
-        cursorborder:'1px solid',
-        cursorborderradius: 0,
-        railalign: 'left',
+      cursorwidth: '8px',
+      cursorborder:'1px solid',
+      cursorborderradius: 0,
+      railalign: 'left',
     });
     // Toggle Submenu
     $(".toggle-submenu").on("click", function(){
@@ -18,8 +18,7 @@ $(function (){
     });
     // Sidebar & Content bar Toggle
     $(".toggle-sidebar").on("click", function (){
-        $(".content-area, .sidebar").toggleClass("no-sidebar"),
-        $(".footer, .sidebar").toggleClass("no-sidebar");
+        $(".content-area, .sidebar").toggleClass("no-sidebar")
         //$(".profileLeftTabs").css("width", "1350px");
         //$("ul.links-area").css("display", "none");
         // If Explain هشوف شرح ليها عشان فى تركاية هنا

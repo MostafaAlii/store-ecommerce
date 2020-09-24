@@ -3,6 +3,9 @@ return [
     'ar'                                    =>  'اللغة العربية',
     'en'                                    =>  'اللغة الانجليزية',
     'copyright'                             =>  'جميع الحقوق محفوظة لدى ',
+    'lang'                                  =>  'اللغة',
+    'active'                                =>  'مفعل',
+    'not_active'                            =>  'غير مفعل',
     // Setting Box Option ::
     'color'                                 =>  'الالوان',
     'fonts'                                 =>  'الخطوط',
@@ -52,7 +55,6 @@ return [
     'value_required'                        =>  'اسم وسيلة التوصيل مطلوبة',
     'shipping_methods_success_edit'         =>  'تم حفظ و تحديث بيانات وسيلة التوصيل بنجاح',
     'shipping_methods_error'                =>  'يوجد خطأ فى تحديث بيانات وسيلة التوصيل حاول مره اخرى',
-
     // Dashboard Page Title ::
         'application_name'                  =>  'تكنو',
         'application_administrator'         =>  'مدير الموقع',
@@ -68,7 +70,7 @@ return [
         'supplier'                          =>  'عميل',
         'total_suppliers'                    =>  'اجمالى عدد العملاء',
 /***********************************************************************************************************/
-    // Setting Page ::
+    // Setting Page Shipping Methods ::
     'shipping_delivery'                     =>  'وسائل التوصيل',
     'edit_shipping_methods'                 =>  'تعديل وسائل التوصيل',
     'shipping_methods_name'                 =>  'اسم وسيلة التوصيل',
@@ -116,12 +118,15 @@ return [
     'user_edit_profile_info'                =>  'تعديل بيانات المستخدم',
     /***********************************************************************************************************/
     // DataTables Export Btn ::
+        'sPrevious'                 => 'السابق',
         'print'                             =>  ' طباعة',
         'export_csv'                        =>  ' تصدير ملف -CSV',
         'export_excel_sheet'                =>  ' تصدير كملف اكسيل',
         'all_records'                       =>  'كل السجلات',
         'sProcessing'                  => 'تحميل',
         'sLengthMenu'                  => 'اظهار _MENU_ سجل',
+        'menuLengthShow'               =>   'اظهار',
+        'menuLengthRecord'             =>   'سجل',
         'sZeroRecords'                 => 'صفر سجل',
         'sEmptyTable'                  => 'جدول خالى',
         'sInfo'                        => 'اظهار _START_ الى  _END_ من _TOTAL_ سجل',
@@ -135,7 +140,6 @@ return [
         'sFirst'                       => 'الاول',
         'sLast'                        => 'الاخير',
         'sNext'                        => 'التالى',
-        'sPrevious'                    => 'السابق',
         'sSortAscending'               => 'ترتيب بحسب الاقدم',
         'sSortDescending'              => 'ترتيب بحسب الاحدث',
         'admin_name'                   => 'اسم المشرف',
@@ -188,11 +192,28 @@ return [
     'social_links'                      =>  'روابط التواصل الاجتماعى',
 /************************************************************************************************************/
 // Main Categories & Sub Categories::
-    'all_main_category'                      =>  'الاقسام الرئيسية',
+    'all_main_category'                 =>  'الاقسام الرئيسية',
     'add_main_category'                 =>  'اضافة قسم رئيسى',
     'show_all_main_category'            =>  'عرض الكل',
     'all_sub_category'                  =>  'الاقسام الفرعية',
     'add_sub_category'                  =>  'اضافة قسم فرعى',
+    'categories_area'                   =>  'ادارة الاقسام',
+    'add_new_category'                  =>  'اضافة قسم جديد',
+    'category_name'                     =>  'اسم القسم',
+    'category_status'                   =>  'حالة القسم',
+    'category_image'                    =>  'صورة القسم',
+    'category_link_name'                =>  'الكلمات المفتاحية',
+    'category_notfound'                 => 'هذا القسم غير موجود',
+    'category_edit_details'             =>  'تعديل بيانات القسم',
+    'category_edit'                     =>  'تعديل القسم',
+    'category_img'                      =>  'صورة القسم',
+    'category_slug'                     =>  'الكلمات المفتاحية',
+    // Succes & Error Messages ::
+    'success_category_update_message'   =>  'تم تحديث بيانات القسم بنجاح',
+    'error_category_update_message'     =>  'يوجد خطأ فى تحديث بيانات القسم برجاء المحاولة مرة اخرى',
+    // Category Validation ::
+    'category_name_required'            =>  'اسم القسم مطلوب',
+    'category_slug_required'            =>  'الاسم بالرابط مطلوب',
 /************************************************************************************************************/
 // Language Page ::
     'show_all_language'    =>   'عرض جميع اللغات',
@@ -215,19 +236,4 @@ return [
     'error_language_notfound_message'    =>  'هذه اللغة غير موجودة...!',
     'error_message'                     =>  'يوجد خطأ برجاء المحاولة مره اخرى...',
 /************************************************************************************************************/
-// Vendors Page ::
-'the_vendor'                        =>  'المتاجر',
-'the_all_vendor'                    =>  'جميع المتاجر',
-'add_new_vendor'                    =>  'اضافة متجر جديد',
-'show_all_vendors'                  =>  'عرض جميع المتاجر',
-'vendor_details'                    =>  'بيانات المتجر',
-'vendor_logo'                       =>  'شعار المتجر',
-'vendor_name'                       =>  'اسم المتجر',
-'vendor_status'                     =>  'حالة المتجر',
-'category_select_choose_text'       =>  'أختر القسم',
-'category_select_text'              =>  'من فضلك اختر القسم المراد',
-'vendor_address'                    =>  'عنوان المتجر',
-// Error & Success Messages ::
-'success_vendor_store_message'      =>  'تم حفظ المتجر بنجاح',
-    'successfully_email_sending'    =>  'لقد تم انشاء حسابكم بنجاح',
 ];
