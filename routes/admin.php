@@ -40,7 +40,14 @@ Route::group([
             Route::put('update', 'ProfileController@updateProfile')->name('update.profile');
         });
         /******************************** End Member Profile ************************************/
-        
+        Route::group(['prefix' => 'main_categories'], function () {
+            Route::get('/', 'MainCategoriesController@index')->name('admin.mainCategories');
+            Route::get('create', 'MainCategoriesController@create')->name('admin.create.mainCategories');
+            Route::post('store', 'MainCategoriesController@store')->name('admin.store.mainCategories');
+            Route::get('edit/{id}', 'MainCategoriesController@edit')->name('admin.edit.mainCategories');
+            Route::post('update/{id}', 'MainCategoriesController@update')->name('admin.update.mainCategories');
+            Route::get('delete/{id}', 'MainCategoriesController@destroy')->name('admin.delete.mainCategories');
+        });
         /*************************** Start End Category & Sub-Category **************************/
         
         /*************************** End Category & Sub-Category *******************************/

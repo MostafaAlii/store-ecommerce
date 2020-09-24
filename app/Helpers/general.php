@@ -1,4 +1,6 @@
 <?php
+// Important Costants ::
+define('PAGINATION_COUNT', 10);
 // get Main CSS File ltr or rtl ::
 function getMainStyleCssFile(){
     return app()->getLocale() == 'ar' ? 'main' : 'mainltr';
@@ -33,3 +35,4 @@ if (!function_exists('datatable_lang')){
         ];
     }
 }
+
