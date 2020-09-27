@@ -30,6 +30,7 @@ class MainCategoryRequest extends FormRequest
         return [
             'name.required'  =>  trans('admin.category_name_required'),
             'slug.required' =>  trans('admin.category_slug_required'),
+            'slug.unique' =>  trans('admin.category_slug_unique'),
         ];
     }
 }

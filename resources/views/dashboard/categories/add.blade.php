@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('page_title')
-    {{ trans('admin.category_edit') }}
+    {{ trans('admin.category_add') }}
 @endsection
 @section('content')
 <!-- Start Content Header -->
@@ -10,9 +10,9 @@
         <div class="row breadcrumbs-top">
             <div class="breadcrumb-wrapper col-12">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">{{ trans('admin.main_dashboard') }}</a></li>
-                    <li class="breadcrumb-item"><a href="{{ route('admin.mainCategories') }}">{{ trans('admin.categories_area') }}</a></li>
-                    <li class="breadcrumb-item"><a href="{{ route('admin.edit.mainCategories', $category->id) }}">{{ trans('admin.category_edit_details') }}</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}"> {{ trans('admin.main_dashboard') }} </a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('admin.mainCategories') }}"> {{ trans('admin.categories_area') }} </a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('admin.create.mainCategories') }}"> {{ trans('admin.category_add_details') }} </a></li>
                 </ol>
             </div>
         </div>
@@ -23,7 +23,7 @@
 
 <!-- Start Page Heading -->
 <div class="page-heading d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">{{ trans('admin.category_edit_details') }}</h1>
+    <h1 class="h3 mb-0 text-gray-800">{{ trans('admin.category_add_details') }}</h1>
 </div>
 <hr>
 <!-- End Page Heading -->
@@ -34,17 +34,16 @@
     @include('dashboard.includes.alerts.errors')
     <div class="card-content collapse show">
         <div class="card-body">
-            <form class="form setting-form row" action="{{ route('admin.update.mainCategories', $category->id) }}" method="post" enctype="multipart/form-data">
+            <!-- Start Form -->
+            <form class="form setting-form row" action="{{ route('admin.store.mainCategories') }}" method="post" enctype="multipart/form-data">
                 @csrf
-                <input type="hidden" name="id" value="{{ $category->id }}">
                 <!-- Start CategoryImg Field -->
                 <div class="form-field userImg form-group col-lg-6">
                     <label for="file" class="input-label">
                         <i class="fa fa-upload upload_icon"> </i>
                         <span id="label_span">{{ trans('admin.category_img') }}</span>
                     </label>
-                    <input id="file" class="" type="file" name="photo" multiple="true">
-                    <p class="text-justify text-warning text-sm-right">{{ trans('admin.category_photo_warning_alert') }}</p>
+                    <input id="file" class="" type="file" name="photo" multiple="true" alt="{{ trans('admin.category_img') }}">
                 </div>
                 <div class="form-field form-group col-lg-6"></div>
                 @error('photo')
@@ -54,41 +53,43 @@
                 <!-- Start Category Name Field -->
                 <div class="form-field form-group col-lg-4">
                     <label for="name" class="label">{{ trans('admin.category_name') }}</label>
-                    <input id="name" class="input-text" value="{{ $category->name }}" type="text" name="name">
+                    <input id="name" class="input-text" value="{{ old('name') }}" type="text" name="name">
                     @error("name")
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
                 </div>
                 <div class="form-field form-group col-lg-8"></div>
                 <!-- End Category Name Field -->
-    
+
                 <!-- Start Category Slug Name Field -->
                 <div class="form-field form-group col-lg-4">
                     <label for="slug" class="label">{{ trans('admin.category_slug') }}</label>
-                    <input id="slug" class="input-text" value="{{ $category->slug }}" type="text" name="slug">
+                    <input id="slug" class="input-text" value="{{ old('slug') }}" type="text" name="slug">
                     @error("slug")
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
                 </div>
                 <div class="form-field form-group col-lg-8"></div>
                 <!-- End Category Slug Name Field -->
-    
+
                 <!-- Start Category Status Field -->
                 <div class="form-field form-group col-lg-12">
                     <label for="switcheryColor4" class="label">{{ trans('admin.category_status') }}</label>
-                    <input type="checkbox" name="is_active" id="switcheryColor4" value="1" data-color="success" class="js-switch" @if($category->is_active == 1) checked @endif>
+                    <input type="checkbox" name="is_active" id="switcheryColor4" data-color="success" class="js-switch" checked />
                     @error("is_active")
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
                 </div>
                 <!-- End Category Status Field -->
+                
                 <!-- Start Submit Field -->
                 <div class="form-field col-lg-6 form-actions">
-                    <button type="submit" class="btn btn-dark"><i class="fa fa-save"> </i> {{ trans('admin.update_action') }}</button>
+                    <button type="submit" class="btn btn-dark"><i class="fa fa-save"> </i> {{ trans('admin.save_action') }}</button>
                     <button type="button" onclick="history.back();" class="btn btn-warning">{{ trans('admin.cancel_action') }}</button>
                 </div>
                 <!-- End Submit Field -->
             </form>
+            <!-- End Form -->
         </div>
     </div>
 </div>
