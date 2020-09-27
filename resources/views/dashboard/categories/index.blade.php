@@ -52,9 +52,9 @@
                 <button class="dt-button btn btn-danger delBtn" tabindex="0" aria-controls="categorydatatable-table" type="button">
                     <span><i class="fa fa-trash"> </i> {{ trans('admin.delete_all') }}</span>
                 </button>
-                <button class="dt-button btn btn-primary" tabindex="0" aria-controls="categorydatatable-table" type="button">
+                <a href="{{ route('admin.create.mainCategories') }}" class="dt-button btn btn-primary" tabindex="0" aria-controls="categorydatatable-table" type="button">
                     <span><i class="fa fa-plus"> </i> {{ trans('admin.add_new_category') }}</span>
-                </button>
+                </a>
             </div>
             <!-- End Datatable Buttton -->
 

@@ -208,12 +208,20 @@ return [
     'category_edit'                     =>  'تعديل القسم',
     'category_img'                      =>  'صورة القسم',
     'category_slug'                     =>  'الكلمات المفتاحية',
+    'category_add'                      =>  'اضافة قسم',
+    'category_add_details'              =>  'اضافة بيانات القسم الجديد',
     // Succes & Error Messages ::
+    'category_photo_warning_alert'      =>  'اترك الصورة اذا كنت لا تريد تحدثها',
+    'success_category_cerate_message'   =>  'تم حفظ القسم بنجاح',
     'success_category_update_message'   =>  'تم تحديث بيانات القسم بنجاح',
+    'success_category_delete_message'   =>  'تم حذف القسم بنجاح',
+    'error_category_cerate_message'     =>  'يوجد خطأ فى اضافة القسم برجاء المحاولة مرة اخرى',
     'error_category_update_message'     =>  'يوجد خطأ فى تحديث بيانات القسم برجاء المحاولة مرة اخرى',
+    'error_category_delete_message'     =>  'يوجد خطأ فى حذف القسم برجاء المحاولة مرة اخرى',
     // Category Validation ::
     'category_name_required'            =>  'اسم القسم مطلوب',
-    'category_slug_required'            =>  'الاسم بالرابط مطلوب',
+    'category_slug_required'            =>  'الكلمات المفتاحية مطلوبة',
+    'category_slug_unique'              =>  'الكلمات المفتاحية الذى ادخلتها موجودة بالفعل رجاء ادخال كلمات اخرى',
 /************************************************************************************************************/
 // Language Page ::
     'show_all_language'    =>   'عرض جميع اللغات',
