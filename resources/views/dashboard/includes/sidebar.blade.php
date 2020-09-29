@@ -69,8 +69,8 @@
                 <i class="fa fa-caret-left"></i>
             </a>
             <ul class="child-links list-unstyled">
-                <li><a href="{{ route('admin.create_admin_profile') }}">{{ trans('admin.add_sub_category') }}</a></li>
-                <li><a href="{{ route('admin.all_admins') }}">{{ trans('admin.show_all_main_category') }}</a></li>
+                <li><a href="{{ route('admin.create.subCategories') }}">{{ trans('admin.add_sub_category') }}</a></li>
+                <li><a href="{{ route('admin.subCategories') }}">{{ trans('admin.show_all_main_category') }}</a></li>
             </ul>
         </li>
         <!-- End Sub Category -->

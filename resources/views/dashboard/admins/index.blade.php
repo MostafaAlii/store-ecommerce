@@ -62,8 +62,4 @@
         </div>
     </div>
     <!-- End Admin Delete Modal -->
-    @push('js')
-    <script>delete_all();</script>
-    {!! $dataTable->scripts() !!}
-    @endpush
 @endsection

@@ -110,11 +110,6 @@ class AdminDatatable extends DataTable
                 'data'    =>    'nickname',
                 'title'   =>    trans('admin.user_nickname'),
             ],
-            /*[
-                'name'    =>  'photo',
-                'data'    =>    'photo',
-                'title'   =>    trans('admin.user_photo'),
-            ],*/
             [
                 'name'    =>  'email',
                 'data'    =>    'email',

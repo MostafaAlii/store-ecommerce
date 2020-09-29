@@ -40,6 +40,8 @@ Route::group([
             Route::put('update', 'ProfileController@updateProfile')->name('update.profile');
         });
         /******************************** End Member Profile ************************************/
+        
+        /*************************** Start End Category & Sub-Category **************************/
         Route::group(['prefix' => 'main_categories'], function () {
             Route::get('/', 'MainCategoriesController@index')->name('admin.mainCategories');
             Route::get('create', 'MainCategoriesController@create')->name('admin.create.mainCategories');
@@ -48,8 +50,15 @@ Route::group([
             Route::post('update/{id}', 'MainCategoriesController@update')->name('admin.update.mainCategories');
             Route::get('delete/{id}', 'MainCategoriesController@destroy')->name('admin.delete.mainCategories');
         });
-        /*************************** Start End Category & Sub-Category **************************/
-        
+        /***************** Sub Category ******************/
+        Route::group(['prefix' => 'sub_categories'], function () {
+            Route::get('/', 'SubCategoriesController@index')->name('admin.subCategories');
+            Route::get('create', 'SubCategoriesController@create')->name('admin.create.subCategories');
+            Route::post('store', 'SubCategoriesController@store')->name('admin.store.subCategories');
+            Route::get('edit/{id}', 'SubCategoriesController@edit')->name('admin.edit.subCategories');
+            Route::post('update/{id}', 'SubCategoriesController@update')->name('admin.update.subCategories');
+            Route::get('delete/{id}', 'SubCategoriesController@destroy')->name('admin.delete.subCategories');
+        });
         /*************************** End Category & Sub-Category *******************************/
     });
 

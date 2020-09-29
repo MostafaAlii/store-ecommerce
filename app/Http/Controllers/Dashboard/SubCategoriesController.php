@@ -5,15 +5,15 @@ use Illuminate\Http\Request;
 use App\Http\Requests\MainCategoryRequest;
 use App\Http\Controllers\Controller;
 use DB;
-class MainCategoriesController extends Controller
+class SubCategoriesController extends Controller
 {
     public function index(){
-        $categories = Category::parent()->orderBy('id', 'DESC')->paginate(PAGINATION_COUNT);
-        return view('dashboard.categories.index', compact('categories'));
+        $categories = Category::child()->orderBy('id', 'DESC')->paginate(PAGINATION_COUNT);
+        return view('dashboard.subcategories.index', compact('categories'));
     }
 
     public function create(){
-        return view('dashboard.categories.add');
+        return view('dashboard.subcategories.add');
     }
 
     public function store(MainCategoryRequest $request){
@@ -89,10 +89,5 @@ class MainCategoriesController extends Controller
         } catch (\Exception $exc) {
             return redirect()->route('admin.mainCategories')->with(['error' => trans('admin.error_category_delete_message')]);
         }
-    }
-
-    public function destroyAll(){
-        
-    }
-    
+    }   
 }

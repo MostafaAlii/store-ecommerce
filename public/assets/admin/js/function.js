@@ -1,32 +1,32 @@
-// Check all in Admins Table Page::
-;
-/*function check_all()
-{
-    // item_checkbox
-    $('input[class="item_checkbox"]:checkbox').each(function (){
-        if( $('input[class="check_all"]:checkbox:checked').length == 0 )
-        {
-            $(this).prop('checked', false);
-        }
-        else
-        {
-            $(this).prop('checked', true);
-        }
+// Checkbox Selected All
+$(function (e) {
+    $("#checkboxAll").on("click", function(){
+        $(".checkboxClass").prop('checked', $(this).prop('checked'));
+    }); 
+    $("#delBtn").on("click", function (e) {
+        e.preventDefault();
+        var allIds = [];
+        $("input:checkbox[name=ids]:checked").each(function () {
+            allIds.push($(this).val());
+        });
+        $.ajax({
+            url: '',
+            type: 'DELETE',
+            data: {
+                ids: allIds,
+                _token: $("input[name=_token]").val()
+            },
+            success:function(response)
+            {
+                $each(allIds, function(key, val){
+                    $()
+                })
+            }
+        });
     });
-}*/
 
-function delete_all() {
-    $(document).on('click', '.delBtn', function (){
-        var item_checked = $('input[class="check_all"]:checkbox:checked').filter(":checked").lenght;
-        if (item_checked > 0){
-            $('.record_count').text(item_checked);
-            $('.not_empty_record').removeClass('invisible');
-            $('.empty_record').addClass('invisible');
-        } else {
-            $('.record_count').text('');
-            $('.not_empty_record').addClass('invisible');
-            $('.empty_record').removeClass('invisible');
-        }
-        $('#multipleDelete').modal('show');
-    });
-}
+    //$('.delBtn').on('click', function (){
+      //  $('#multipleDelete').modal('show');
+    //});
+});
+

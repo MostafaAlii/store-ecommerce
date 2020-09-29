@@ -12,13 +12,7 @@ html body{
     direction: rtl;
     text-align: right;
 }
-.btn-group, .btn-group-vertical {
-    /*position: relative !important;
-    display: -ms-inline-flexbox !important;
-    display: inline-flex !important;
-    vertical-align: middle !important;
-    float: left !important;*/
-}
+
 .dataTables_wrapper .dt-buttons button{
     float: left !important;
     margin: 2px;

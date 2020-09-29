@@ -20,6 +20,12 @@ class Category extends Model
     {
         return $query->whereNull('parent_id');
     }
+
+    public function scopeChild($query)
+    {
+        return $query->whereNotNull('parent_id');
+    }
+
     public  function getStatus(){
        echo ($this->is_active == 0) ?  '<button class="btn btn-outline-danger">'.trans('admin.not_active').'</button>' : '<button class="btn btn-outline-success">'.trans('admin.active').'</button>';
     }  
