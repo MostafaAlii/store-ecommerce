@@ -1,0 +1,117 @@
+@extends('layouts.admin')
+@section('page_title')
+    {{ trans('admin.category_add') }}
+@endsection
+@section('content')
+<!-- Start Content Header -->
+<div class="content-header row">
+    <div class="content-header-left col-md-12 col-12 mb-2">
+        <!-- Start Breadcrumbs -->
+        <div class="row breadcrumbs-top">
+            <div class="breadcrumb-wrapper col-12">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}"> {{ trans('admin.main_dashboard') }} </a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('admin.mainCategories') }}"> {{ trans('admin.categories_area') }} </a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('admin.subCategories') }}"> {{ trans('admin.all_sub_category') }} </a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('admin.create.subCategories') }}"> {{ trans('admin.add_sub_category') }} </a></li>
+                </ol>
+            </div>
+        </div>
+        <!-- End Breadcrumbs -->
+    </div>
+</div>
+<!-- End Content Header -->
+
+<!-- Start Page Heading -->
+<div class="page-heading d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">{{ trans('admin.subcategory_add_details') }}</h1>
+</div>
+<hr>
+<!-- End Page Heading -->
+
+<!-- Start Content Body -->
+<div class="content-body">
+    @include('dashboard.includes.alerts.success')
+    @include('dashboard.includes.alerts.errors')
+    <div class="card-content collapse show">
+        <div class="card-body">
+            <!-- Start Form -->
+            <form class="form setting-form row" action="{{ route('admin.store.mainCategories') }}" method="post" enctype="multipart/form-data">
+                @csrf
+                <!-- Start CategoryImg Field -->
+                <div class="form-field userImg form-group col-lg-6">
+                    <label for="file" class="input-label">
+                        <i class="fa fa-upload upload_icon"> </i>
+                        <span id="label_span">{{ trans('admin.category_img') }}</span>
+                    </label>
+                    <input id="file" class="" type="file" name="photo" multiple="true" alt="{{ trans('admin.category_img') }}">
+                </div>
+                <div class="form-field form-group col-lg-6"></div>
+                @error('photo')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
+                <!-- End CategoryImg Field -->
+                <!-- Start Category Name Field -->
+                <div class="form-field form-group col-lg-4">
+                    <label for="name" class="label">{{ trans('admin.category_name') }}</label>
+                    <input id="name" class="input-text" value="{{ old('name') }}" type="text" name="name">
+                    @error("name")
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
+                <div class="form-field form-group col-lg-8"></div>
+                <!-- End Category Name Field -->
+
+                <!-- Start Category Slug Name Field -->
+                <div class="form-field form-group col-lg-4">
+                    <label for="slug" class="label">{{ trans('admin.category_slug') }}</label>
+                    <input id="slug" class="input-text" value="{{ old('slug') }}" type="text" name="slug">
+                    @error("slug")
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
+                <div class="form-field form-group col-lg-8"></div>
+                <!-- End Category Slug Name Field -->
+
+                <!-- Start Category Status Field -->
+                <div class="form-field form-group col-lg-12">
+                    <label for="switcheryColor4" class="label">{{ trans('admin.category_status') }}</label>
+                    <input type="checkbox" name="is_active" id="switcheryColor4" data-color="success" class="js-switch" checked />
+                    @error("is_active")
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
+                <!-- End Category Status Field -->
+                
+                <!-- Start Submit Field -->
+                <div class="form-field col-lg-6 form-actions">
+                    <button type="submit" class="btn btn-dark"><i class="fa fa-save"> </i> {{ trans('admin.save_action') }}</button>
+                    <button type="button" onclick="history.back();" class="btn btn-warning">{{ trans('admin.cancel_action') }}</button>
+                </div>
+                <!-- End Submit Field -->
+            </form>
+            <!-- End Form -->
+        </div>
+    </div>
+</div>
+<!-- End Content Body -->
+@push('js')
+    <script type="text/javascript">
+        $(function (){
+            // Switchery Check Box ::
+            var elem = document.querySelector('.js-switch');
+            var init = new Switchery(elem,{
+                color             : '#64bd63',
+                secondaryColor    : '#ccc',
+                jackColor         : '#fff',
+                jackSecondaryColor: null,
+                className         : 'switchery',
+                disabled          : false,
+                disabledOpacity   : 0.5,
+                speed             : '1s',
+                size              : 'small',
+            });
+        });
+    </script>
+@endpush
+@endsection

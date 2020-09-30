@@ -192,12 +192,10 @@ return [
     'social_links'                      =>  'روابط التواصل الاجتماعى',
 /************************************************************************************************************/
 // Main Categories & Sub Categories::
-    'all_main_category'                 =>  'الاقسام الرئيسية',
+    'all_main_category'                 =>  'إلاقسام الرئيسية',
     'add_main_category'                 =>  'اضافة قسم رئيسى',
     'show_all_main_category'            =>  'عرض الكل',
-    'all_sub_category'                  =>  'الاقسام الفرعية',
-    'add_sub_category'                  =>  'اضافة قسم فرعى',
-    'categories_area'                   =>  'ادارة الاقسام',
+    'categories_area'                   =>  'إدارة الاقسام',
     'add_new_category'                  =>  'اضافة قسم جديد',
     'category_name'                     =>  'اسم القسم',
     'category_status'                   =>  'حالة القسم',
@@ -210,6 +208,12 @@ return [
     'category_slug'                     =>  'الكلمات المفتاحية',
     'category_add'                      =>  'اضافة قسم',
     'category_add_details'              =>  'اضافة بيانات القسم الجديد',
+    // Sub Category ::
+    'subcategories_area'                =>  'إدارة الاقسام الفرعية',
+    'add_new_subcategory'               =>  'إضافة قسم فرعى جديد',
+    'all_sub_category'                  =>  'إلاقسام الفرعية',
+    'add_sub_category'                  =>  'اضافة قسم فرعى',
+    'subcategory_add_details'           =>  'إضافة بيانات قسم فرعى جديد',
     // Succes & Error Messages ::
     'category_photo_warning_alert'      =>  'اترك الصورة اذا كنت لا تريد تحدثها',
     'success_category_cerate_message'   =>  'تم حفظ القسم بنجاح',

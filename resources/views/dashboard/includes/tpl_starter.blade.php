@@ -26,13 +26,6 @@
     <script src="{{ asset('assets/admin/js/dataTables.bootstrap4.js') }}" charset="utf-8"></script>
     <script src="{{ asset('assets/admin/js/dataTables.buttons.js') }}" charset="utf-8"></script>
     <script src="{{ asset('assets/admin/js/buttons.server-side.js') }}" charset="utf-8"></script>
-    <script>
-        $(function (e) {
-            $("#checkAll").click(function (){
-                $(".item_checkbox").prop('checked', $(this).prop('checked'));
-            });
-        });
-    </script>
     {{--@notify_css--}}
 </head>
 <body>

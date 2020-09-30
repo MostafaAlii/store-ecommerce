@@ -50,10 +50,6 @@ $(function (){
             $("#label_span").text(filename);
         }
     });
-    // Delete All From Admin Pages::
-    $("#delBtn").on("click", function(){
-        alert('test');
-    });
 });
     // Open FullScreen
     var elem = document.documentElement;

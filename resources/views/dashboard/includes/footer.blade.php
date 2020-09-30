@@ -9,6 +9,7 @@
         <script src="{{ asset('assets/admin/libs/ckeditor/ckeditor.js') }}"></script>
         <script src="{{ asset('assets/admin/js/ck_config_file_ar.js') }}"></script>
         <script src="{{ asset('assets/admin/js/mainJS.js') }}"></script>
+        <script src="{{ asset('assets/admin/js/function.js') }}"></script>
         @stack('js')
         @stack('css')
     </div>

@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('page_title')
-    {{ trans('admin.categories_area') }}
+    {{ trans('admin.subcategories_area') }}
 @endsection
 
 @section('content')
@@ -13,6 +13,7 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">{{ trans('admin.main_dashboard') }}</a></li>
                         <li class="breadcrumb-item"><a href="{{ route('admin.mainCategories') }}"> {{ trans('admin.categories_area') }}</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('admin.subCategories') }}"> {{ trans('admin.subcategories_area') }}</a></li>
                     </ol>
                 </div>
             </div>
@@ -23,7 +24,7 @@
 
     <!-- Start Page Heading -->
     <div class="page-heading d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">{{ trans('admin.all_main_category') }}</h1>
+        <h1 class="h3 mb-0 text-gray-800">{{ trans('admin.all_sub_category') }}</h1>
     </div>
     <hr>
     <!-- End Page Heading -->
@@ -52,8 +53,8 @@
                 <button id="delBtn" class="dt-button btn btn-danger delBtn" tabindex="0" aria-controls="categorydatatable-table" type="button">
                     <span><i class="fa fa-trash"> </i> {{ trans('admin.delete_all') }}</span>
                 </button>
-                <a href="{{ route('admin.create.mainCategories') }}" class="dt-button btn btn-primary" tabindex="0" aria-controls="categorydatatable-table" type="button">
-                    <span><i class="fa fa-plus"> </i> {{ trans('admin.add_new_category') }}</span>
+                <a href="{{ route('admin.create.subCategories') }}" class="dt-button btn btn-primary" tabindex="0" aria-controls="categorydatatable-table" type="button">
+                    <span><i class="fa fa-plus"> </i> {{ trans('admin.add_new_subcategory') }}</span>
                 </a>
             </div>
             <!-- End Datatable Buttton -->
@@ -72,13 +73,13 @@
             
 
             <!-- Start Table -->
-            <table id="categorydatatable-table" class="dataTable table table-striped table-responsive table-bordered table-striped" style="width: 100%;" role="grid" aria-describedby="categorydatatable-table_info" true>
+            <table id="categorydatatable-table" class="table table-striped table-responsive table-bordered table-striped" style="width: 100%;" role="grid" aria-describedby="categorydatatable-table_info" true>
                 <thead>
                     <tr role="row">
                         <th class="" tabindex="0" aria-controls="categorydatatable-table" rowspan="1" colspan="1" style="width: 13px;" aria-label="">
                             <input name="checkbox" type="checkbox" class="item_checkbox" id="checkboxAll">
                         </th>
-                        <th class="sorting" tabindex="0" aria-controls="categorydatatable-table" rowspan="1" colspan="1" style="width: 37px;" aria-label="{{ trans('admin.table_field_id_number') }}">
+                        <th class="" tabindex="0" aria-controls="categorydatatable-table" rowspan="1" colspan="1" style="width: 37px;" aria-label="{{ trans('admin.table_field_id_number') }}">
                             {{ trans('admin.table_field_id_number') }}
                         </th>
                         <!-- Category Name -->
@@ -133,8 +134,8 @@
                                 <td>{{ $category->getStatus() }}</td>
                                 <td>{{ $category->created_at }}</td>
                                 <td>{{ $category->updated_at }}</td>
-                                <td><a href="{{ route('admin.edit.mainCategories', $category->id) }}" class="btn btn-outline-info btn-min-width box-shadow-3 mr-1 mb-1"><i class="fa fa-edit"> </i></a></td>
-                                <td><a href="{{ route('admin.delete.mainCategories', $category->id) }}" class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1"><i class="fa fa-trash"> </i></a>                                </td>
+                                <td><a href="{{ route('admin.edit.subCategories', $category->id) }}" class="btn btn-outline-info btn-min-width box-shadow-3 mr-1 mb-1"><i class="fa fa-edit"> </i></a></td>
+                                <td><a href="{{ route('admin.delete.subCategories', $category->id) }}" class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1"><i class="fa fa-trash"> </i></a></td>                                </td>
                             </tr>
                         @endforeach
                     @endisset
