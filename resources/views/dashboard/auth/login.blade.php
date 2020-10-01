@@ -41,7 +41,7 @@
                                 <div class="form-group row">
                                     <div class="col-md-6 col-12 text-center text-md-left">
                                         <fieldset>
-                                            <input type="checkbox" name="remember_me" id="remember-me" class="chk-remember">
+                                            <input type="checkbox" data-color="success" class="js-switch" name="remember_me" id="remember-me" class="chk-remember">
                                             <label for="remember-me">تذكر دخولي</label>
                                         </fieldset>
                                     </div>
@@ -56,4 +56,23 @@
             </div>
         </div>
     </section>
+    @push('js')
+        <script type="text/javascript">
+            $(function (){
+                // Switchery Check Box ::
+                var elem = document.querySelector('.js-switch');
+                var init = new Switchery(elem,{
+                    color             : '#64bd63',
+                    secondaryColor    : '#ccc',
+                    jackColor         : '#fff',
+                    jackSecondaryColor: null,
+                    className         : 'switchery',
+                    disabled          : false,
+                    disabledOpacity   : 0.5,
+                    speed             : '1s',
+                    size              : 'small',
+                });
+            });
+        </script>
+    @endpush
 @endsection
