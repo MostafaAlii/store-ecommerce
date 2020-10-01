@@ -36,3 +36,32 @@ if (!function_exists('datatable_lang')){
     }
 }
 
+// Load Main Categories in JsTree In Create SubCategory Page ::
+if (!function_exists('load_mainCategories')){
+    function load_mainCategories($select = null) {
+        $categories = \App\Models\Category::selectRaw('name' . ' as text')
+                        ->selectRaw('id as id')
+                        ->selectRaw('parent_id as parent')
+                        ->get(['text', 'parent', 'id']);
+        
+        $categories_arr = [];
+        foreach ($categories as $category) {
+            $list = [];
+            if ($select !== null and $select == $category->id) {
+                $list_arr['icon']           =   '';
+                $list_arr['li_attr']        =   '';
+                $list_arr['a_attr']         =   '';
+                $list_arr['children']       =   [];
+                $list_arr['state']          =   [
+                    'opened'    =>  true,
+                    'selected'  =>  true,
+                ];
+            }
+            $list_arr['id'] = $category->id;
+            $list_arr['parent'] = $category->parent !== null ? $category->parent:'#';
+            $list_arr['text'] = $category->text;
+            array_push($categories_arr, $list_arr);
+        }
+        return json_encode($categories_arr, JSON_UNESCAPED_UNICODE);
+    }
+}

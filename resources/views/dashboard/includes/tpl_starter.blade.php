@@ -11,9 +11,11 @@
     <link rel="stylesheet" href="{{ asset('assets/admin/libs/forms/selectivity/selectivity.min.css') }}"/>
     <link rel="stylesheet" href="{{ asset('assets/admin/libs/forms/selectize/selectize.min.css') }}"/>
     <link rel="stylesheet" href="{{ asset('assets/admin/libs/switchery/switchery.min.css') }}"/>
-    
+    <link rel="stylesheet" href="{{ asset('assets/admin/libs/jstree/src/themes/default/style.css') }}"/>
+
     <link rel="stylesheet" href="{{ asset('assets/admin/css/' .getMainStyleCssFile(). '.css') }}"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&amp;family=Open+Sans&amp;display=swap"/>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/dropzone.css"/>
     <script src="{{ asset('assets/admin/js/jquery-3.4.1.min.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/dropzone.js"></script>

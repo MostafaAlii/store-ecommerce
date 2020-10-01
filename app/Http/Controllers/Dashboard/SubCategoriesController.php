@@ -13,7 +13,8 @@ class SubCategoriesController extends Controller
     }
 
     public function create(){
-        return view('dashboard.subcategories.add');
+        $categories = Category::parent()->orderBy('id', 'DESC')->get();
+        return view('dashboard.subcategories.add', compact('categories'));
     }
 
     public function store(MainCategoryRequest $request){
@@ -34,20 +35,20 @@ class SubCategoriesController extends Controller
             $category->name = $request->name;
             $category->save();
             // Return Success Message
-            return redirect()->route('admin.mainCategories')->with(['success' => trans('admin.success_category_cerate_message')]);    
+            return redirect()->route('admin.subCategories')->with(['success' => trans('admin.success_subcategory_cerate_message')]);    
             //DB::commit();
         } catch (\Exception $exc) {
             //DB::rollback();
-            return redirect()->route('admin.maincategories')->with(['error' => 'admin.error_category_cerate_message']);
+            return redirect()->route('admin.subcategories')->with(['error' => 'admin.error_subcategory_cerate_message']);
         }
     }
 
     public function edit($id){
          $category = Category::orderBy('id', 'DESC')->find($id);
         if (!$category)
-            return redirect()->route('admin.mainCategories')->with(['error' => trans('admin.category_notfound')]);
+            return redirect()->route('admin.subCategories')->with(['error' => trans('admin.category_notfound')]);
 
-        return view('dashboard.categories.edit', compact('category'));
+        return view('dashboard.subcategories.edit', compact('category'));
     }
 
     public function update($id, MainCategoryRequest $request){
@@ -58,7 +59,7 @@ class SubCategoriesController extends Controller
                 // Check ID in Request ::
                 $category = Category::find($id);
                 if (!$category)
-                    return redirect()->route('admin.mainCategories')->with(['error' => trans('admin.category_notfound')]);
+                    return redirect()->route('admin.subCategories')->with(['error' => trans('admin.category_notfound')]);
                 // Check Status is active or not in Request ::
                 if(!$request->has('is_active'))
                     $request->request->add(['is_active' => 0]);
@@ -70,11 +71,11 @@ class SubCategoriesController extends Controller
                 // Update Category Name Translation ::
                 $category->name = $request->name;
                 $category->save();
-                return redirect()->route('admin.mainCategories')->with(['success' => trans('admin.success_category_update_message')]);
+                return redirect()->route('admin.subCategories')->with(['success' => trans('admin.success_subcategory_update_message')]);
                 //DB::commit();
             } catch (\Exception $exc) {
                 //DB::rollback();
-                return redirect()->route('admin.mainCategories')->with(['error' => trans('admin.error_category_update_message')]);
+                return redirect()->route('admin.subCategories')->with(['error' => trans('admin.error_subcategory_update_message')]);
         }
     }
 
@@ -83,11 +84,11 @@ class SubCategoriesController extends Controller
             // Check ID in Request ::
             $category = Category::orderBy('id', 'DESC')->find($id);
             if (!$category)
-                return redirect()->route('admin.mainCategories')->with(['error' => trans('admin.category_notfound')]);            
+                return redirect()->route('admin.subCategories')->with(['error' => trans('admin.category_notfound')]);            
             $category->delete();
-            return redirect()->route('admin.mainCategories')->with(['success' => trans('admin.success_category_delete_message')]);
+            return redirect()->route('admin.subCategories')->with(['success' => trans('admin.success_subcategory_delete_message')]);
         } catch (\Exception $exc) {
-            return redirect()->route('admin.mainCategories')->with(['error' => trans('admin.error_category_delete_message')]);
+            return redirect()->route('admin.subCategories')->with(['error' => trans('admin.error_subcategory_delete_message')]);
         }
     }   
 }

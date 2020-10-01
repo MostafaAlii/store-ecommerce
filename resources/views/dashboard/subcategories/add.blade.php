@@ -36,8 +36,18 @@
     <div class="card-content collapse show">
         <div class="card-body">
             <!-- Start Form -->
-            <form class="form setting-form row" action="{{ route('admin.store.mainCategories') }}" method="post" enctype="multipart/form-data">
+            <form class="form setting-form row" action="{{ route('admin.store.subCategories') }}" method="post" enctype="multipart/form-data">
                 @csrf
+                    <!-- Start Main Categories JsTree -->
+                    <div class="col-lg-6 form-group">
+                        <label class="h5 mb-0 text-gray-800">{{ trans('admin.select_parent_category') }}</label>
+                        <hr>
+                        <div id="jstree"></div>
+                        <hr class="pull-right" style="width: 35%; border: 0.5px solid #333;">
+                    </div>
+                    <div class="col-lg-6 form-group"></div>
+                    <!-- End Main Categories JsTree -->
+                
                 <!-- Start CategoryImg Field -->
                 <div class="form-field userImg form-group col-lg-6">
                     <label for="file" class="input-label">
@@ -111,6 +121,25 @@
                 speed             : '1s',
                 size              : 'small',
             });
+        });
+        // JsTree fired
+        $('#jstree').jstree({
+            "core" : {
+                'data' : [
+                            { "id" : "1", "parent" : "#", "text" : "Simple root node" },
+                            { "id" : "2", "parent" : "1", "text" : "Root node 2" },
+                            { "id" : "3", "parent" : "2", "text" : "Child 1" },
+                            { "id" : "4", "parent" : "2", "text" : "Child 2" },
+                ],
+                "themes" : {
+                "variant" : "large",
+                responsive: true
+                }
+            },
+            "checkbox" : {
+                "keep_selected_style" : false
+            },
+            "plugins" : [ "wholerow" ]
         });
     </script>
 @endpush
